@@ -1,0 +1,17 @@
+.searchContainer {
+  margin-top: 20%;
+  margin-bottom: 300%;
+  display: flex;
+  gap: 1rem;
+}
+.searchInput {
+  width: 100%;
+  background-color: rgba(255,255,255,0.3);
+  //border: none;
+  border-bottom: rgb(114, 67, 67) 3px solid;
+}
+.button {
+  margin: large;
+  font-size: medium;
+  margin-left: 1rem;
+}

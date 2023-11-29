@@ -1,0 +1,51 @@
+.container {
+    margin-top: 0,5rem;
+    display: flex;
+    align-items: center;
+    min-height: 50vh;
+    text-align: center;
+}
+.title {
+    font-size: 2rem;
+    padding: 20px;
+}
+
+.weather-infos {
+    display: flex;
+    align-items: center;
+    min-height: 50vh;
+    flex-direction: column;
+    justify-content: space-around;
+    justify-content: space-evenly;
+}
+/*.weather-cloud {
+    display: flex;
+    width: 100%;
+    height: auto;
+}*/
+.temperature {
+    font-size: 3rem;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+.good {
+    margin-bottom: 20px;
+    font-size: x-large;
+}
+
+.time {
+    font-size: 20px;
+    color: rgb(138, 119, 119);
+    padding: 5%;
+    opacity: 1;
+}
+.infos {
+    display: flex;
+    gap: 5rem;
+    background-color: rgb(0, 0, 0, 0.3);
+    border-radius: 25px;
+    //width: 20vw;
+    padding: 0.5rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
