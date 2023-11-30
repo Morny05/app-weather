@@ -6,8 +6,18 @@
     text-align: center;
 }
 .title {
-    font-size: 2rem;
+    font-size: 180%;
     padding: 20px;
+    font-weight: bold;
+    font-style: italic;
+    .time {
+        font-size: 16px;
+        color: rgb(0, 0, 0);
+        padding: 2%;
+        opacity: 65%;
+        margin: -0.5rem;
+        margin-bottom: 0.5%;
+    }
 }
 
 .weather-infos {
@@ -18,34 +28,45 @@
     justify-content: space-around;
     justify-content: space-evenly;
 }
-/*.weather-cloud {
-    display: flex;
-    width: 100%;
-    height: auto;
-}*/
+
+.summer {
+    margin-top: -5%;
+}
 .temperature {
-    font-size: 3rem;
-    padding: 5px;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 180%;
+    padding: 2px;
     margin-bottom: 10px;
+    margin-top: 2%;
 }
 .good {
     margin-bottom: 20px;
-    font-size: x-large;
+    font-size: 150%;
+    font-weight: bold;
+    font-style: italic;
 }
 
-.time {
-    font-size: 20px;
-    color: rgb(138, 119, 119);
-    padding: 5%;
-    opacity: 1;
-}
+
 .infos {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 0.8rem;
     display: flex;
     gap: 5rem;
     background-color: rgb(0, 0, 0, 0.3);
-    border-radius: 25px;
-    //width: 20vw;
-    padding: 0.5rem;
+    border-radius: 100px;
+
+    padding: 0.6rem;
     justify-content: center;
     margin-bottom: 2rem;
+    .border_right {
+        border-right: 2px solid rgba(0, 0, 0, 0.2);
+        padding-right: 60px;
+        padding-left: 1.8rem;
+
+    }
+    .border_left{
+        padding-right: 30px;
+    }
 }

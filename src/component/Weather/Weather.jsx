@@ -17,39 +17,39 @@ export const Weather = () => {
         <Card className={styles.container}>
             <Card.Body >
                 <Card.Title className={styles.title}>
-                  Casablanca , MA <IoLocationSharp fill='#845EC2'/>
+                   Casablanca , MA <IoLocationSharp fill='#845EC2'/>
                   <div className={styles.time}>
-                    <span>11H22MIN </span>
-                    <span><img src={Icons8} alt='' width={'8%'} height={'8%'}/> </span>
+                    <span>Tuesday, 15:00 AM </span>
+                    <span><img src={Icons8} alt='' width={'7%'} height={'8%'}/> </span>
                   </div>
                 </Card.Title>
                 <Card.Text as={'div'} className={styles.weatherInfos}>
-                    <div>
-                      <img src={Summer} alt='cloudImg' width={'50%'}/>
+                    <div className={styles.summer}>
+                      <img src={Summer} alt='cloudImg' width={'40%'}/>
                     </div>
                     <div className={styles.temperature}>
-                      <span>35 C</span>
+                      <span>35° C</span>
                       <span>
-                        <img src={Temperature} alt='' width={'15%'}/>
+                        <img src={Temperature} alt='' width={'40px'}/>
                       </span>
                     </div>
                     <h1 className={styles.good}>Good Moorning Casablanca</h1>
                     <div className={styles.infos}>
-                    <div>
-                      <div><img src={Sunrise} alt='' width={'25px'}/></div>
-                      <div>SUNRISE</div>
-                      <div>08:00</div>
-                    </div>
-                    <div>
-                      <div><img src={Wind} alt='' width={'25px'}/></div>
-                      <div>WIND</div>
-                      <div>08m/s</div>
-                    </div>
-                    <div>
-                      <div><img src={Temperature} alt='' width={'25px'} color='dark'/></div>
-                      <div>Temperature</div>
-                      <div>35 C</div>
-                    </div>
+                      <div className={styles.border_right}>
+                        <div><img src={Sunrise} alt='' width={'25px'}/></div>
+                        <div>SUNRISE</div>
+                        <div>08:00</div>
+                      </div>
+                      <div className={styles.border_right}>
+                        <div><img src={Wind} alt='' width={'25px'}/></div>
+                        <div>WIND</div>
+                        <div>08m/s</div>
+                      </div>
+                      <div className={styles.border_left}>
+                        <div><img src={Temperature} alt='' width={'25px'} height={'25px'}/></div>
+                        <div>TEMPERATURE</div>
+                        <div>35° C</div>
+                      </div>
                     </div>
                 </Card.Text>
             </Card.Body>
