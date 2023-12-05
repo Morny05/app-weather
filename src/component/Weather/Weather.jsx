@@ -8,16 +8,20 @@ import Summer from '../../assets/img/summer.png';
 import Sunrise from '../../assets/img/sunrise.png';
 import Wind from '../../assets/img/wind.png';
 import '../../style.scss';
+import { useSelector } from 'react-redux';
 
 
 
 export const Weather = () => {
+  const weather = useSelector( ({weather}) => weather )
+  console.log(weather)
+
   return (
     <>
         <Card className={styles.container}>
             <Card.Body >
                 <Card.Title className={styles.title}>
-                   Casablanca , MA <IoLocationSharp fill='#845EC2'/>
+                   {weather.name} , MA <IoLocationSharp fill='#845EC2'/>
                   <div className={styles.time}>
                     <span>Tuesday, 15:00 AM </span>
                     <span><img src={Icons8} alt='' width={'7%'} height={'8%'}/> </span>
