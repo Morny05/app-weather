@@ -8,9 +8,13 @@ import { setData } from '../../features/weather/WeatherSlice';
 
 export const SearchBar = () => {
   const GEO_API_KEY = process.env.REACT_APP_GEO_API_KEY;
+
   const WEATHER_API_KEY = process.env.REACT_APP_WEATHER_API;
+  
   const [cities, setCities] =useState([])
+  
   const dispatch = useDispatch(); 
+
 
   const handleInputChange = (e) => {
     const {value} = e.currentTarget
@@ -24,6 +28,7 @@ export const SearchBar = () => {
     console.log(value)
   }
 
+
   const handleAutocompleteSelect = (e, value) => {
     const {lat, lon} = value
     fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}`)
@@ -34,6 +39,7 @@ export const SearchBar = () => {
       })
   }
 
+  
   return (
     <>
       <Form >
