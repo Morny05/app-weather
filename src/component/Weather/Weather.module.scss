@@ -1,4 +1,5 @@
 .container {
+    width: auto;
     margin-top: 0,5rem;
     display: flex;
     align-items: center;
@@ -6,21 +7,24 @@
     text-align: center;
 }
 .title {
+    width: auto;
     font-size: 180%;
     padding: 20px;
     font-weight: bold;
     font-style: italic;
     .time {
-        font-size: 16px;
+        width: auto;
+        font-size: 14px;
         color: rgb(0, 0, 0);
-        padding: 2%;
+        padding: 1%;
         opacity: 65%;
-        margin: -0.5rem;
+        margin: 0rem;
         margin-bottom: 0.5%;
     }
 }
 
 .weather-infos {
+    width: auto;
     display: flex;
     align-items: center;
     min-height: 50vh;
@@ -30,9 +34,11 @@
 }
 
 .summer {
-    margin-top: -5%;
+    width: auto;
+    margin-top: 0%;
 }
 .temperature {
+    width: auto;
     font-weight: bold;
     font-style: italic;
     font-size: 180%;
@@ -41,6 +47,7 @@
     margin-top: 2%;
 }
 .good {
+    width: auto;
     margin-bottom: 20px;
     font-size: 150%;
     font-weight: bold;
@@ -49,6 +56,7 @@
 
 
 .infos {
+    width: auto;
     font-style: italic;
     font-weight: bold;
     font-size: 0.8rem;
@@ -59,13 +67,16 @@
     padding: 0.6rem;
     justify-content: center;
     margin-bottom: 2rem;
+    padding-right: -20px ;
     .border_right {
+        width: auto;
         border-right: 2px solid rgba(0, 0, 0, 0.2);
-        padding-right: 60px;
-        padding-left: 1.8rem;
+        padding-right: 20px ;
+        padding-left: 20px;
 
     }
     .border_left{
+        width: auto;
         padding-right: 30px;
     }
 }

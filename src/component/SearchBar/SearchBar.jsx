@@ -4,14 +4,15 @@ import { Form } from 'react-bootstrap';
 import styles from './SearchBar.module.scss';
 import { Autocomplete, TextField } from '@mui/material';
 import { useDispatch } from 'react-redux';
-import { setData } from '../../features/weather/WeatherSlice';
+import { resetData, setData } from '../../features/weather/WeatherSlice';
 
 export const SearchBar = () => {
   const GEO_API_KEY = process.env.REACT_APP_GEO_API_KEY;
 
   const WEATHER_API_KEY = process.env.REACT_APP_WEATHER_API;
   
-  const [cities, setCities] =useState([])
+  const [cities, setCities] =useState([]);
+  const [unity, setUnity] = useState('metric');
   
   const dispatch = useDispatch(); 
 
@@ -30,13 +31,17 @@ export const SearchBar = () => {
 
 
   const handleAutocompleteSelect = (e, value) => {
-    const {lat, lon} = value
-    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}`)
-      .then(response => response.json())
-      .then(json => {
-        const {lat, lon, clouds, main, name, sys, weather, wind} = json
-        dispatch(setData({lat, lon, clouds, main, name, sys, weather, wind}))
-      })
+    if (value !== null) {
+      const {lat, lon} = value
+      fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&units=${unity}&lon=${lon}&appid=${WEATHER_API_KEY}`)
+        .then(response => response.json())
+        .then(json => {
+          const {lat, lon, clouds, main, name, sys, weather, wind} = json
+          dispatch(setData({lat, lon, clouds, main, name, sys, weather, wind}))
+        })
+    } else {
+      dispatch(resetData())
+    }
   }
 
   
@@ -45,14 +50,14 @@ export const SearchBar = () => {
       <Form >
         <Form.Group className={`d-flex ${styles.serachContainer}`}>
           <Autocomplete className={styles.searchInput} 
-                        clearOnBlur={false}
                         onChange={handleAutocompleteSelect}
                         getOptionLabel={(option) => option.formatted}
                         renderInput={ (params) => 
                           <TextField onChange={handleInputChange} {...params} 
                                     label={'Enter City...'}/>}              
                         options={cities}/>
-          <Button variant='primary' className={styles.button}>Search</Button>
+          <Button variant='primary' className={styles.button}>
+            Search</Button>
         </Form.Group>
       </Form>
     </>
